@@ -61,6 +61,9 @@ FishAndChips.Fish {
 		end
 		if finalcount >= card.ability.extra.destroy then return true else return false end
 	end,
+	keep_on_use = function(self, card)
+		return true
+	end,
 	use = function(self, card)
 		if not (G.hand and G.hand.highlighted and #G.hand.highlighted >=4) then return end
 		local suits = SMODS.Suit.obj_buffer

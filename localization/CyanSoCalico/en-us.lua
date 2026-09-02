@@ -64,7 +64,7 @@ return {
                         "it with {C:attention}The Fish{}",
                         "{C:inactive,s:0.8}Showdown Blinds excluded{}",
                         "{ppu_bubble:usable}"
-                    }
+                    },
                 }
             },
             fish_fac_csc_wishiwashi = {
@@ -88,12 +88,6 @@ return {
                     "Nothing is stronger than...",
                     "a... Flounder's... dream...!"
                 },
-                --[[
-                text = {
-                    "{C:dark_edition}+#1#{} {C:fac_fish}Fish{} slot per",
-                    "empty {C:attention}Joker{} slot",
-                }
-                    ]]
                 text = {
                     "{C:chips}+#1#{} Chips per {C:fac_fish}Fish",
                     "outnumbering {C:attention}Jokers{}",
@@ -110,10 +104,8 @@ return {
                 },
                 text = {
                     "This {C:fac_fish}Fish{} gains",
-                    "{C:chips}+#1#{} Chips per",
-                --    "each {C:attention}card{} or",
-                    "{C:fac_fish}Fish{} {C:red}destroyed{}",
-                --    "or {C:red}used up{}",
+                    "{C:chips}+#1#{} Chips per {C:fac_fish}Fish{}",
+                    "{C:red}destroyed{} or {C:red}used up{}",
                     "{C:inactive}(Currently {C:chips}+#2#{C:inactive} Chips){}"
                 }
             },
@@ -139,10 +131,8 @@ return {
                     "it with eternal love.",
                 },
                 text = {
-                    "If poker hand is a",
-                    "{C:attention}#1#{} of {C:attention}face{} cards,",
-                --    "create a copy of",
-                --    "{C:tarot}#2#{}",
+                    "If poker hand",
+                    "contains a {C:attention}#1#{},",
                     "create {C:tarot}#2#{}",
                     "{C:inactive}(Must have room){}"
                 },
@@ -159,6 +149,7 @@ return {
                     "{C:attention}#1#{} selected cards",
                     "of the same {C:fac_suits}suit{}",
                     "{ppu_bubble:usable}",
+                    "{C:inactive,s:0.6,E:2}infinite uses{}"
                 },
             },
             fish_fac_csc_sardinium = {
@@ -169,8 +160,8 @@ return {
                 },
                 text = {
                     "Upgrade selected",
-                    "cards' {C:attention}poker hand{}",
-                    "by {C:attention}#1#{} level",
+                    "cards' contained",
+                    "{C:attention}poker hands{}",
                     "{ppu_bubble:usable}"
                 }
             },
@@ -181,13 +172,6 @@ return {
                     "doing in the water?"
                 },
                 text = {
-                    --[[
-                    "This Fish gains {C:chips}+#1#{} Chips",
-                    "per consecutive hand",
-                    "played that contains",
-                    "no {C:attention}#2#{} or {C:attention}#3#{}",
-                    "{C:inactive}(Currently {C:chips}+#4#{C:inactive} Chips){}"
-                    ]]
                     "{C:mult}+#1#{} Mult if poker hand",
                     "does not contain a",
                     "{C:attention}#2#{} or {C:attention}#3#{}",

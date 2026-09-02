@@ -45,6 +45,7 @@ FishAndChips.Fish {
 	end,
 
 	use = function(self, card, area)
-		SMODS.upgrade_poker_hands{hands = G.FUNCS.get_poker_hand_info(G.hand.highlighted), from = card}
+		local _,_,poker_hands = G.FUNCS.get_poker_hand_info(G.hand.highlighted)
+		SMODS.upgrade_poker_hands{hands = poker_hands, from = card}
 	end
 }

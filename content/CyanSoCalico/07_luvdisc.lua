@@ -42,28 +42,30 @@ FishAndChips.Fish {
 	end,
 
 	calculate = function(self, card, context)
-		if context.joker_main and context.scoring_name == card.ability.extra.hand and #G.consumeables.cards + (G.GAME.consumeable_buffer or 0) < G.consumeables.config.card_limit then
-			local anynonface = false
-			for k, v in pairs(context.poker_hands[card.ability.extra.hand][1]) do
-				if not v:is_face() then
-					anynonface = true
-				end
-			end
-			if not anynonface then
-				G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
-				return {
-					message = localize("k_plus_tarot"),
-					colour = G.C.PURPLE,
-					func = function()
-						G.E_MANAGER:add_event(Event({func = function()
-							SMODS.add_card{ key = card.ability.extra.card }
-							G.GAME.consumeable_buffer = 0
-							return true
-						end }))
-					end,
-					card = context.blueprint and context.blueprint_card or card
-				}
-			end
+		if
+			context.joker_main
+		and
+			context.poker_hands
+		and
+			context.poker_hands[card.ability.extra.hand]
+		and
+			next(context.poker_hands[card.ability.extra.hand])
+		and
+			#G.consumeables.cards + (G.GAME.consumeable_buffer or 0) < G.consumeables.config.card_limit
+		then
+			G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
+			return {
+				message = localize("k_plus_tarot"),
+				colour = G.C.PURPLE,
+				func = function()
+					G.E_MANAGER:add_event(Event({func = function()
+						SMODS.add_card{ key = card.ability.extra.card }
+						G.GAME.consumeable_buffer = 0
+						return true
+					end }))
+				end,
+				card = context.blueprint and context.blueprint_card or card
+			}
 		end
 	end,
 }

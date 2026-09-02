@@ -57,8 +57,8 @@ FishAndChips.Fish {
         end
         ]]
         if
-    --        (context.fac_use_fish and not context.kept_on_use)
-    --    or
+            (context.fac_use_fish and not context.kept_on_use)
+        or
             (context.joker_type_destroyed and context.card and context.card.ability and context.card.ability.set == "fac_Fish")
         and not context.blueprint then
             return {
