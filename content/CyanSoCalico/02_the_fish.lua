@@ -38,7 +38,7 @@ FishAndChips.Fish {
     weight = 10,
 	environments = {
 		wormhole = 10,
-		styx = 0.1
+		styx = 10
 	},
 
 	blueprint_compat = false,

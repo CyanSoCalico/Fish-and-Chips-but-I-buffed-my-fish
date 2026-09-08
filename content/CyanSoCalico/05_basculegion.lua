@@ -29,7 +29,7 @@ FishAndChips.Fish {
     weight = 5,
 	environments = {
 		styx = 5,
-		wormhole = 1
+		wormhole = 5
 	},
 
     perishable_compat = false,

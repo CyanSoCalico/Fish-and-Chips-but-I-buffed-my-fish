@@ -28,8 +28,8 @@ FishAndChips.Fish {
     weight = 1,
 	environments = {
 		volcano = 1,
-		wormhole = 0.1,
-		backroom = 0.1
+		wormhole = 1,
+		backroom = 1
 	},
 
 	loc_vars = function(self, info_queue, card)

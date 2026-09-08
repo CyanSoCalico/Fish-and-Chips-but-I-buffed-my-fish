@@ -148,8 +148,7 @@ return {
                     "{C:red}Destroy{} at least",
                     "{C:attention}#1#{} selected cards",
                     "of the same {C:fac_suits}suit{}",
-                    "{ppu_bubble:usable}",
-                    "{C:inactive,s:0.6,E:2}infinite uses{}"
+                    "{C:inactive,s:0.9}infinitely {ppu_bubble:usable}"
                 },
             },
             fish_fac_csc_sardinium = {

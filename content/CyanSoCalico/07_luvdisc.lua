@@ -30,7 +30,7 @@ FishAndChips.Fish {
 	environments = {
 		pier = 10,
 		city_river = 1,
-		wormhole = 1
+		wormhole = 10
 	},
 
 	loc_vars = function(self, info_queue, card)

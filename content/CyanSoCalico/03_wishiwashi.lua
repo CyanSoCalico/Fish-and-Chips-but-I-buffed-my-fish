@@ -28,7 +28,7 @@ FishAndChips.Fish {
     weight = 10,
 	environments = {
 		pier = 10,
-		wormhole = 1
+		wormhole = 10
 	},
 
 	loc_vars = function(self, info_queue, card)

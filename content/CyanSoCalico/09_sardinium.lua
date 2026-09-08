@@ -28,7 +28,7 @@ FishAndChips.Fish {
     weight = 8,
 	environments = {
 		styx = 8,
-		wormhole = 1
+		wormhole = 8
 	},
 
 	loc_vars = function(self, info_queue, card)
@@ -45,7 +45,11 @@ FishAndChips.Fish {
 	end,
 
 	use = function(self, card, area)
-		local _,_,poker_hands = G.FUNCS.get_poker_hand_info(G.hand.highlighted)
+		local _,_,_poker_hands = G.FUNCS.get_poker_hand_info(G.hand.highlighted)
+		local poker_hands = {}
+		for k, v in pairs(_poker_hands) do
+			poker_hands[#poker_hands+1] = next(v) and G.GAME.hands[k] and k or nil
+		end
 		SMODS.upgrade_poker_hands{hands = poker_hands, from = card}
 	end
 }
